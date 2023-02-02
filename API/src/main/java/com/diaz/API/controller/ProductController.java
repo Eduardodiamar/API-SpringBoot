@@ -63,7 +63,14 @@ public class ProductController {
         }
     }
     @DeleteMapping("/product/{id}")
-    public void deleteProduct(@PathVariable Integer id){
-        productService.deleteProduct(id);
+    public ResponseEntity deleteProduct(@PathVariable Integer id){
+        try {
+            productService.deleteProduct(id);
+             return new ResponseEntity( HttpStatus.OK);
+        } catch (Exception e) {
+                         return new ResponseEntity( HttpStatus.NOT_FOUND);
+
+        }
+        
     }
 }
