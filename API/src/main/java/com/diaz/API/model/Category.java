@@ -4,11 +4,8 @@
  */
 package com.diaz.API.model;
 
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,15 +14,9 @@ import lombok.NoArgsConstructor;
  *
  * @author eduardodiamar
  */
-
-@Entity
 @Data @NoArgsConstructor @AllArgsConstructor
-public class Product {
+public class Category {
     @Id @GeneratedValue
     private Integer id;
     private String name;
-    private float price;
-    @ManyToOne
-    @JoinColumn(name = "category_id")
-    private Category category;
 }
