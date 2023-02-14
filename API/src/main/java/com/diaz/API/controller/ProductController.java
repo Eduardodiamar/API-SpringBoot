@@ -56,6 +56,7 @@ public class ProductController {
             Product existentProduct = productService.getProductById(id);
             existentProduct.setName(product.getName());
             existentProduct.setPrice(product.getPrice());
+            existentProduct.setCategory(product.getCategory());
             productService.saveProduct(existentProduct);
             return new ResponseEntity<Product>(product, HttpStatus.OK);
         } catch (Exception e) {

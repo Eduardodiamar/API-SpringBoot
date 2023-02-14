@@ -4,6 +4,7 @@
  */
 package com.diaz.API.model;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import lombok.AllArgsConstructor;
@@ -14,6 +15,7 @@ import lombok.NoArgsConstructor;
  *
  * @author eduardodiamar
  */
+@Entity
 @Data @NoArgsConstructor @AllArgsConstructor
 public class Category {
     @Id @GeneratedValue
