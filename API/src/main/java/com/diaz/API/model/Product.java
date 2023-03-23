@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Data @NoArgsConstructor @AllArgsConstructor
-public class Product {
+public class Product implements java.io.Serializable{
     @Id @GeneratedValue
     private Integer id;
     private String name;
